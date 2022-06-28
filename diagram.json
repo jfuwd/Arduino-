@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "author": "Jvsp Ub",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 213.12, "left": -12.75, "attrs": {} },
+    {
+      "type": "wokwi-membrane-keypad",
+      "id": "keypad1",
+      "top": -192.04,
+      "left": 51.26,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd2004",
+      "id": "lcd1",
+      "top": 254.31,
+      "left": 311.1,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "keypad1:R1", "uno:9", "yellow", [ "v0" ] ],
+    [ "keypad1:R2", "uno:8", "green", [ "v0" ] ],
+    [ "keypad1:R3", "uno:7", "white", [ "v0" ] ],
+    [ "keypad1:R4", "uno:6", "blue", [ "v0" ] ],
+    [ "keypad1:C1", "uno:5", "magenta", [ "v0" ] ],
+    [ "keypad1:C2", "uno:4", "orange", [ "v0" ] ],
+    [ "keypad1:C3", "uno:3", "gray", [ "v0" ] ],
+    [ "keypad1:C4", "uno:2", "gold", [ "v0" ] ],
+    [ "uno:5V", "lcd1:VCC", "red", [ "v0" ] ],
+    [ "lcd1:GND", "uno:GND.2", "black", [ "h0" ] ],
+    [ "uno:A4", "lcd1:SDA", "green", [ "v0" ] ],
+    [ "lcd1:SCL", "uno:A5", "green", [ "h0" ] ]
+  ]
+}
